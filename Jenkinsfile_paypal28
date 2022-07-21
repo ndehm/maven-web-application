@@ -16,8 +16,7 @@ node{
  } 
   stage('5deploy_uat'){
     //sh "scp "
-    deploy adapters: [tomcat9(credentialsId: 'tomcatCredentials', path: '', url: 'http://18.119.10.206:8080/')], contextPath: null, war: 'target/*war'
-  }
+deploy adapters: [tomcat9(credentialsId: 'TOMCAT-DEPLOYER', path: '', url: 'http://3.96.53.130:8009/')], contextPath: 'liontechacademy', war: 'target/*war'  }
  stage('6Approval'){
     timeout(time:9, unit:'HOURS') {
         input message: 'Application ready for deployment, Please review and approve'
