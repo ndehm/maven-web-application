@@ -32,5 +32,7 @@ deploy adapters: [tomcat9(credentialsId: 'TOMCAT-DEPLOYER', path: '', url: 'http
 Regards,
 Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'paypal-team@gmail.com'
  }
-*/
+
 }  
+
+#please consult team before running deployment
